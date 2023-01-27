@@ -1,11 +1,10 @@
 import java.io.BufferedReader;
-import java.io.IOException;
 import java.io.InputStreamReader;
 
 public class Exercise1 {
 
-    private static String VISUAL = "Visual";
-    private static String NUTS = "Nuts";
+    private static final String VISUAL = "Visual";
+    private static final String NUTS = "Nuts";
 
     public static void printVisualNuts(int maxNumber) throws Exception {
 

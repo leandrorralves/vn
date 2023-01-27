@@ -2,7 +2,6 @@ import org.json.JSONArray;
 import org.junit.Before;
 import org.junit.Test;
 
-import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -13,7 +12,7 @@ public class Exercise2Test {
     Exercise2 ex2;
 
     @Before
-    public void setUpStream() {
+    public void setUp() {
         ex2 = new Exercise2(new JSONArray("[\n" +
                 "  {\n" +
                 "    country:\"US\",\n" +
@@ -50,7 +49,7 @@ public class Exercise2Test {
 
     @Test
     public void getOfficialLangCount() {
-        Map<String, Integer> countriesMap = new HashMap();
+        Map<String, Integer> countriesMap = new HashMap<>();
 
         countriesMap.put("DE",1);
         countriesMap.put("BE",3);
@@ -68,11 +67,8 @@ public class Exercise2Test {
 
     @Test
     public void findMostCommonLanguage() {
-        ArrayList<String> languages = new ArrayList<>();
-        languages.add("de");
-        languages.add("nl");
-
         assertTrue(ex2.findMostCommonLanguage().contains("de"));
         assertTrue(ex2.findMostCommonLanguage().contains("nl"));
+        assertEquals(2, ex2.findMostCommonLanguage().size());
     }
 }

@@ -14,7 +14,7 @@ public class Exercise1Test {
     private final ByteArrayOutputStream outContent = new ByteArrayOutputStream();
     private final PrintStream originalOut = System.out;
 
-    String test15 = "1\n" +
+    final String test15 = "1\n" +
             "2\n" +
             "Visual\n" +
             "4\n" +
@@ -51,7 +51,7 @@ public class Exercise1Test {
     }
 
     @Rule
-    public ExpectedException exceptionRule = ExpectedException.none();
+    public final ExpectedException exceptionRule = ExpectedException.none();
 
     @Test
     public void testPrintNegative() throws Exception {

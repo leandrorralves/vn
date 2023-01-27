@@ -7,7 +7,7 @@ import java.util.Map;
 
 public class Exercise2 {
 
-    private JSONArray countries;
+    private final JSONArray countries;
 
     public Exercise2(JSONArray countries) {
         this.countries = countries;
@@ -44,7 +44,7 @@ public class Exercise2 {
 
     //that counts all the official languages spoken in the listed countries.
     public Map<String, Integer> getLanguageCountFromCountries() {
-        Map<String, Integer> countriesMap = new HashMap();
+        Map<String, Integer> countriesMap = new HashMap<>();
 
         for (int i = 0; i < countries.length(); i++) {
             JSONObject country = (JSONObject) countries.get(i);
@@ -72,8 +72,7 @@ public class Exercise2 {
     public ArrayList<String> findMostCommonLanguage() {
 
         Map<String, Integer> languagesMap = new HashMap<>();
-        int maxLanguages = 1;
-
+        int maxLanguages;
 
         for (int i = 0; i < countries.length(); i++) {
             JSONObject country = (JSONObject) countries.get(i);
